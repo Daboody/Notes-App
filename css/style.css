@@ -1,0 +1,97 @@
+* { 
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: rgba(0, 0, 0, 0.842);
+}
+/* Add Button */
+.add-note {
+    width: 180px;
+    padding: 10px 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 65px;
+    right: 10px;
+    background-color: rgb(33, 187, 33);
+    color: #fff;
+    cursor: pointer;
+    z-index: 3;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.app-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    place-items: center;
+    place-content: center;
+    gap: 20px;
+    margin-top: 200px;
+}
+/* Note Area */
+textarea{
+    width: 100%;
+    height: 300px;
+    margin-bottom: 10px;
+    resize: none;
+    border: none;
+    border-radius: 5px;
+    padding: 40px 15px 0 15px;
+    font-size: 23px;
+    position: relative;
+    transition: .5s;
+}
+textarea:focus {
+    outline: none;
+}
+
+.Note-wrapper {
+ position: relative;
+ width: fit-content;
+}
+/* Note bar */
+.Note-wrapper::after{
+    content: "";
+    position: relative;
+    top: -315px;
+    left: 0;
+    width: 100%;
+    padding: 20px 0px;
+    background-color: greenyellow;
+    display: block;
+}
+
+/* Edit Option */
+.fa-pen-to-square {
+    position: absolute;
+    cursor: pointer;
+    color: black;
+    top: 7px;
+    right: 40px;
+    z-index: 1;
+    font-size: 20px;
+}
+/* Delete Option */
+.fa-trash-can {
+    position: absolute;
+    cursor: pointer;
+    color: black;
+    top: 7px;
+    right: 10px;
+    z-index: 1;
+    font-size: 20px;
+}
+
+/* when-field-disabled */
+.when-field-disabled{
+    background-color:rgba(255, 255, 255, 0.849);
+    color: #000;
+    font-style: italic;
+    transform: rotate(360deg);
+    transition: .5s;
+}
